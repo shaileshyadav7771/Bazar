@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'import_export',
     'category',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +71,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'Bazar.wsgi.application'
+
+#We are not using default auth so let's define it.
+AUTH_USER_MODEL = 'accounts.Accounts'  #appname.modelname
 
 
 # Database
@@ -124,3 +128,9 @@ STATIC_ROOT= BASE_DIR /'static'
 STATICFILES_DIRS=[
     'Bazar/static',
 ]
+
+
+# Media File Configuration
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
