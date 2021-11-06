@@ -37,9 +37,10 @@
             <div class="category-wrap dropdown d-inline-block float-right">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                     <i class="fa fa-bars"></i> All category
+                   
                 </button>
                 <div class="dropdown-menu">
-
+                    <a class="dropdown-item" href="{% url 'store' %}">All Products </a>
                     {% for category in links %}
                          <a class="dropdown-item" href="{{category.get_absolute_url}}">{{ category.category_name }} </a>
                     {% endfor %}
