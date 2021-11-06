@@ -19,5 +19,10 @@ def store(request,category_slug=None):
 		'product_counts': product_counts,
 	}
 
-
 	return render(request,'store/store.html',context)
+
+
+def product_detail(request,category_slug,product_slug):
+
+
+	return render(request, 'store/product_detail.html')
