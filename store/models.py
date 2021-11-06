@@ -13,6 +13,7 @@ class Product(models.Model):
 	category = models.ForeignKey(Category, on_delete=models.CASCADE)
 	created_date = models.DateTimeField(auto_now_add=True)
 	modified_date = models.DateTimeField(auto_now=True)
+	actual_price = models.IntegerField(blank=True,default=0)
 
 	def __str__(self):
 		return self.product_name
