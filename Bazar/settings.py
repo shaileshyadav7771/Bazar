@@ -66,6 +66,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #here we are using context processor so menu_links is fn name
+                #reason of using it is now we can use menu_link in any template.
+               'category.context_processors.menu_links',
+
             ],
         },
     },
