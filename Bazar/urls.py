@@ -19,11 +19,14 @@ from . import views
 #below for MEDIA file
 from django.conf.urls.static import static
 from django.conf import settings
+from django.conf.urls import include
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home , name='home'),
+    #let include store url first traffic will come here and then we will handle in store url's :)
+    path('store/',include('store.urls')),
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
