@@ -1,5 +1,6 @@
 from django.db import models
 from category.models import Category
+from django.urls import reverse
 # Create your models here.
 
 class Product(models.Model):
@@ -14,6 +15,10 @@ class Product(models.Model):
 	created_date = models.DateTimeField(auto_now_add=True)
 	modified_date = models.DateTimeField(auto_now=True)
 	actual_price = models.IntegerField(blank=True,default=0)
+
+	def get_url(self):
+		return reverse('product_detail', args=[self.category.slug, self.slug])
+	    # now to use in template we will use {{ product.get_absolute_url }}
 
 	def __str__(self):
 		return self.product_name
