@@ -18,7 +18,7 @@ class Product(models.Model):
 
 	def get_url(self):
 		return reverse('product_detail', args=[self.category.slug, self.slug])
-	    # now to use in template we will use {{ product.get_absolute_url }}
+	    # now to use in template we will use {{ product.get_url }}
 
 	def __str__(self):
 		return self.product_name
