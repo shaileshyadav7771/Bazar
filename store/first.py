@@ -1,23 +1,68 @@
+class P:
+	def land(self):
+		print("Property")
+
+class C(P):
+
+	pass
+
+
+
+
+
+
+
+
+
+
+
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 # a=10
 # b=a
 # print(b)
+#
+# n1,n2=0,1
+# count=0
+# nterms=5
+#
+# while count < nterms:
+#     print(n1)
+#     nth=n1+n2
+#     n1=n2
+#     n2=nth
+#     count+=1
+#
+#
+#
 
 
 
 # 5 4 3 2 1
 
-def fact(no):
-    if no==1:
-        return no
-    else:
-        value=no * fact(no-1)
-        print(value)
-    return value
-
-
-
-
-fact(5)
+# def fact(no):
+#     if no==1:
+#         return no
+#     else:
+#         value=no * fact(no-1)
+#         print(value)
+#     return value
+# fact(5)
 
 
 # facto=1
@@ -127,12 +172,6 @@ fact(5)
 # s=len(set([1,1,2,3,3,3,4]))
 # print(s)
 #
-
-
-
-
-
-
 
 
 
